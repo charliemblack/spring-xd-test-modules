@@ -1,0 +1,1 @@
+stream create --definition "time --format=HHmmss | header-enricher-value --header-name=destination_region --value=TestData | header-enricher-spel --header-name=partition_key --expression=payload | referance-data-action  | gemfire-storage  --region-name=TestData" --name gemfire-sample
